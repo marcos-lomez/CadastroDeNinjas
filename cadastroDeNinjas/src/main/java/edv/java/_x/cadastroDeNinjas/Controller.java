@@ -1,0 +1,16 @@
+package edv.java._x.cadastroDeNinjas;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping
+public class Controller {
+    @GetMapping("/boasVindas")
+    public String BoaVindas(){
+        return "essa e minha primeira mensagem nessa rota";
+    }
+
+
+}
