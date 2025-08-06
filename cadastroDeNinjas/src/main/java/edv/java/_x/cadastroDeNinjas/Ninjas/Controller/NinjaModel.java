@@ -1,7 +1,11 @@
-package edv.java._x.cadastroDeNinjas;
+package edv.java._x.cadastroDeNinjas.Ninjas.Controller;
 
 
+
+import edv.java._x.cadastroDeNinjas.Ninjas.Controller.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+
 
 @Entity
 @Table(name ="tb_cadastro")
@@ -9,13 +13,22 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private long id;
 
-   private   String nome;
+    private long id;
 
-   private   String email;
+    private   String nome;
 
-  private   int idade;
+    private   String email;
+
+    private   int idade;
+
+    //UM NINJA UMA UNICA MISSAO
+
+          @ManyToOne
+          @JoinColumn(name ="missoes_id") //chave estrangeira
+  private MissoesModel missoes;
+
+
 
 public NinjaModel(){
 
