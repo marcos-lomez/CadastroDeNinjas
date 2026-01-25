@@ -2,9 +2,15 @@ package dev.java10x.CadastroDeNinjas.missoes;
 
 import dev.java10x.CadastroDeNinjas.Ninjas.Controller.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_missoes")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MisooesModel {
 
 
@@ -18,7 +24,6 @@ private String dificuldade;
 
             @OneToMany(mappedBy = "missoes")
 private NinjaModel ninja;
-
 
 
 
