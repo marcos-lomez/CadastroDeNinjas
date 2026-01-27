@@ -1,5 +1,5 @@
 package dev.java10x.CadastroDeNinjas.missoes;
-
+import java.util.List;
 import dev.java10x.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,8 +22,8 @@ private String nome;
 
 private String dificuldade;
 
-            @OneToMany(mappedBy = "missoes")
-private NinjaModel ninja;
+    @OneToMany(mappedBy = "missoes")
+    private List <NinjaModel> ninjas;
 
 
 

@@ -32,7 +32,7 @@ public class NinjaModel {
 
    @ManyToOne
    @JoinColumn(name="missoes_id") // foreina key ou chave estrangeira
-   private List<MisooesModel> missoes;
+   private MisooesModel missoes;
 
 
 }
