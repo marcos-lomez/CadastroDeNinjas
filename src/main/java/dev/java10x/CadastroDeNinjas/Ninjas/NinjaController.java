@@ -29,9 +29,9 @@ public String BoasVindas(){
   }
 
 //Procura Ninja por ID  (create)
-@GetMapping("/listarID")
-public String MostrarTodosPorID(){
-    return  "Mostrar Ninja POr ID";
+@GetMapping("/listar/{id}")
+public NinjaModel listarNinjasPorID(@PathVariable Long id){
+  return  ninjaService.ListarNinjasPorID(id);
 
 }
 
