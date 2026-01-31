@@ -44,9 +44,9 @@ public NinjaModel listarNinjasPorID(@PathVariable Long id){
 
 
 //Alterar dados ninjas (UPDATE)
-@PutMapping("/alterarId")
-    public String alterarNinjaPorId(){
-        return "Alterar Ninja por ID";
+@PutMapping("/atualizar/{id}")
+    public NinjaModel alterarNinjaPorId(@PathVariable Long id,@RequestBody NinjaModel ninjaAtualizado){
+       return ninjaService.atualizarNinja(id,ninjaAtualizado);
 
 }
 
