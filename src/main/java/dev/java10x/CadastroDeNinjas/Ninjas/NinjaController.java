@@ -23,9 +23,8 @@ public String BoasVindas(){
 
 //Adicionar Ninja (CREATE)
   @PostMapping("/criar")
-    public String criarNinja(){
-        return "Ninja Criado";
-
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+        return ninjaService.criarNinja(ninja);
   }
 
 //Procura Ninja por ID  (create)
