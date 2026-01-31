@@ -36,6 +36,13 @@ private NinjaRepository ninjaRepository;
  }
 
 
+//deletar o ninja  - tem que ser um metodo void
+
+ public void deletarPorId(Long id){
+        ninjaRepository.deleteById(id);
+
+
+ }
 
 
 
